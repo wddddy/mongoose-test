@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>books</title>
+    <style>
+        table, td, th {
+            border: 1px solid red;
+        }
+
+        td, tr {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2><a href="/addbooks">添加书</a></h2>
+<table>
+    <tr>
+        <th>书名</th>
+        <th>作者</th>
+        <th>年龄</th>
+        <th>修改</th>
+    </tr>
+    <% books.forEach(function (b) { %>
+    <tr>
+        <td><%= b.name %></td>
+        <td><%= b.author %></td>
+        <td><%= b.age %></td>
+        <td><a href="/showedit/?name=<%= b.name %>">修改</a> <a href="/remove/<%= b.bid %>">删除</a></td>
+    </tr>
+    <% }) %>
+</table>
+</body>
+</html>

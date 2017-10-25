@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>books</title>
+</head>
+<body>
+<h1>修改信息</h1>
+<form action="doedit/<%= bid %>" method="get">
+    <p>编码：</p>
+    <input type="text" name="name" value="<%= bid %>" disabled>
+    <p>书名：</p>
+    <input type="text" name="name" value="<%= name %>">
+    <p>作者：</p>
+    <input type="text" name="author" value="<%= author %>">
+    <p>年龄：</p>
+    <input type="text" name="age" value="<%= age %>"><br>
+    <input style="display: none" type="text" name="sourcename" value="<%= name %>"><br>
+    <input type="button" onclick="submit()" value="提交">
+</form>
+</body>
+</html>
